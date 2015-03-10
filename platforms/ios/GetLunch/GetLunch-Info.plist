@@ -66,8 +66,6 @@
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
-	<key>NSMainNibFile</key>
-	<string></string>
 	<key>NSMainNibFile~ipad</key>
 	<string></string>
 	<key>UILaunchImages</key>
@@ -172,6 +170,12 @@
 			<key>UILaunchImageSize</key>
 			<string>{768, 1024}</string>
 		</dict>
+	</array>
+	<key>UIStatusBarHidden</key>
+	<false/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
