@@ -1,6 +1,13 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "file": "plugins/com.adobe.plugins.GAPlugin/www/GAPlugin.js",
+        "id": "com.adobe.plugins.GAPlugin.GAPlugin",
+        "clobbers": [
+            "GAPlugin"
+        ]
+    },
+    {
         "file": "plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js",
         "id": "nl.x-services.plugins.socialsharing.SocialSharing",
         "clobbers": [
@@ -96,6 +103,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.device/www/device.js",
+        "id": "org.apache.cordova.device.device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.device-motion/www/Acceleration.js",
         "id": "org.apache.cordova.device-motion.Acceleration",
         "clobbers": [
@@ -164,26 +178,20 @@ module.exports = [
         "clobbers": [
             "window.open"
         ]
-    },
-    {
-        "file": "plugins/com.adobe.plugins.GAPlugin/www/GAPlugin.js",
-        "id": "com.adobe.plugins.GAPlugin.GAPlugin",
-        "clobbers": [
-            "GAPlugin"
-        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "com.adobe.plugins.GAPlugin": "2.4.0",
     "nl.x-services.plugins.socialsharing": "4.3.10",
     "org.apache.cordova.console": "0.2.9",
     "org.apache.cordova.contacts": "0.2.12",
+    "org.apache.cordova.device": "0.2.13",
     "org.apache.cordova.device-motion": "0.2.8",
     "org.apache.cordova.device-orientation": "0.3.7",
     "org.apache.cordova.geolocation": "0.3.11",
-    "org.apache.cordova.inappbrowser": "0.5.2",
-    "com.adobe.plugins.GAPlugin": "2.4.0"
+    "org.apache.cordova.inappbrowser": "0.5.2"
 }
 // BOTTOM OF METADATA
 });

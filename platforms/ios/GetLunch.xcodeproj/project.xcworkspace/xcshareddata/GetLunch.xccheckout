@@ -5,15 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D6368464-F2DA-4B03-A634-ECEFEB2BD775</string>
+	<string>5C4FFEBF-FFCF-46F4-B661-D4C8733367F5</string>
 	<key>IDESourceControlProjectName</key>
 	<string>GetLunch</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>8EFA8DE1E19D4F5111221AB61BF8089EB4C94C7F</key>
 		<string>https://github.com/PavelDubrovskiy/GetLunchiOS.git</string>
-		<key>C11442BAF62993ED7FEBE28FD92D386BCD2A0E83</key>
-		<string>https://github.com/PavelDubrovskiy/getLunch.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>platforms/ios/GetLunch.xcodeproj</string>
@@ -21,8 +19,6 @@
 	<dict>
 		<key>8EFA8DE1E19D4F5111221AB61BF8089EB4C94C7F</key>
 		<string>../../../..</string>
-		<key>C11442BAF62993ED7FEBE28FD92D386BCD2A0E83</key>
-		<string>../../../../../getLunch</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/PavelDubrovskiy/GetLunchiOS.git</string>
@@ -32,14 +28,6 @@
 	<string>8EFA8DE1E19D4F5111221AB61BF8089EB4C94C7F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C11442BAF62993ED7FEBE28FD92D386BCD2A0E83</string>
-			<key>IDESourceControlWCCName</key>
-			<string>getLunch</string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
