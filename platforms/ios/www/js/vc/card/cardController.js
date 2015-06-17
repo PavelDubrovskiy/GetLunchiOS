@@ -60,6 +60,7 @@ define(["app", "js/vc/card/cardView", "js/utilities/forms", "js/utilities/map", 
 		lunch.metres=getDistance();		
 		lunch.mainSource=app.config.source;
 		externalSite=lunch.site;
+		
 		view.render({
 			bindings: bindings,
 			card:lunch
@@ -85,7 +86,7 @@ define(["app", "js/vc/card/cardView", "js/utilities/forms", "js/utilities/map", 
 			view.expandMap(map);
 		}
 		
-		initMap(lunch);
+		initMap();
 		
 		gallery = new Gallery({wrapper: '.b_gallery', items: 'a'});
 		//window.clearInterval(app.intervalCompass);
@@ -102,6 +103,9 @@ define(["app", "js/vc/card/cardView", "js/utilities/forms", "js/utilities/map", 
 		// Предотвращение открытия меню по свайпу при перетаскивании карты
 		map.map.events.add('mouseenter', app.disablePanel);
 		map.map.events.add('mouseleave', app.enablePanel);
+		
+		map.objectManager.events.add('mouseenter', app.disablePanel);
+		map.objectManager.events.add('mouseleave', app.enablePanel);
 		
 		// Если расстояние от пользователя до кафе меньше 700 метров, показываем карту так, чтобы вместить точку пользователя и точку кафе, иначе показываем только кафе
 		map.createMarks([{
