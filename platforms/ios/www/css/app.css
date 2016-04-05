@@ -640,7 +640,7 @@ a{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 0 8px;
+	margin: 0 8px 21px 8px;
 }
 
 .b_cards_main-info + .b_btn_row,
@@ -837,7 +837,7 @@ a{
 	width: 41px;
 	height: 41px;
 	
-	border-radius: 10px;
+	border-radius: 20px;
 	-webkit-box-shadow: 0 1px 1px rgba(51,52,52,.4);
 	box-shadow: 0 1px 1px rgba(51,52,52,.4);
 	
@@ -869,17 +869,17 @@ a{
 	.b_map_btn.m_zoomin{
 		top: 27.5%;
 		right: 8px;
-		margin: -7px 0 0;
+		margin: -18px 0 0;
 	}
 	.b_map_btn.m_zoomout{
 		top: 27.5%;
 		right: 8px;
-		margin: 40px 0 0;
+		margin: 29px 0 0;
 	}
 	.b_map_btn.m_geolocation{
-		top: 55%;
-		left: 8px;
-		margin: -31px 0 0;
+		top: 27.5%;
+		right: 8px;
+		margin: 76px 0 0;
 	}
 	.b_map_btn.m_findme{
 		font-size: 24px;
@@ -889,11 +889,11 @@ a{
 	}
 	
 	.st_fullscreen ~ .b_map_btn.m_zoomin,
-	.st_fullscreen ~ .b_map_btn.m_zoomout{
+	.st_fullscreen ~ .b_map_btn.m_zoomout,
+	.st_fullscreen ~ .b_map_btn.m_geolocation{
 		top: 45%;
 	}
 	
-	.st_fullscreen ~ .b_map_btn.m_geolocation,
 	.st_fullscreen ~ .b_map_btn.m_findme{
 		top: 96.5%;
 	}
@@ -1282,6 +1282,7 @@ a{
 .b_phone{
 	font-size: 20px;
 	text-align: center;
+	color: #5d8900;
 }
 
 .b_phone + .b_site{
@@ -1524,15 +1525,15 @@ a{
 /* $b_compass */
 .b_compass{
 	font-size: 15px;
-	line-height: 26px;
-	height: 26px;
+	line-height: 33px;
+	height: 33px;
 	width: auto;
 	
 	color: #000;
 	
 	top: 47px;
 	left: 4px;
-	border-radius: 13px;
+	border-radius: 16px;
 	padding: 0 8px 0 24px;
 	white-space: nowrap;
 }
@@ -1544,7 +1545,7 @@ a{
 	width: 12px; height: 12px;
 	color: #ffd162;
 	position: absolute;
-	top: 7px; left: 6px;
+	top: 13px; left: 7px;
 }
 
 .b_compass_arr .icon{
@@ -1740,7 +1741,7 @@ a{
 
 .b_review_buttons .icon-thumb-up-filled,
 .b_rating .icon-thumb-up-filled{
-	color: #f30;
+	color: #6c9f00;
 	font-size: 19px;
 }
 
@@ -2588,6 +2589,103 @@ label.label-radio input[type="checkbox"]:checked ~ .item-inner:after, label.labe
 .icon-mail{
 	font-size: 15px;
 }
+
+/*------Modal F7-------*/
+
+.modal-center{text-align: center;}
+.modal-stars{
+	margin-top: 12px;
+}
+.modal-star{
+	display:inline-block;
+	width:30px;
+	height:30px;
+	background: url(../i/star.png) no-repeat;
+	margin-right: 7px;
+}
+.modal-star:LAST-CHILD{margin-right: 0px;}
+.modal-star-setReview{margin-right: 7px;}
+.modal-button-small{font-size: 11px;}
+
+/*---------auto/masstransit-----------*/
+.m_map_center_top{
+	position: absolute;
+	z-index: 1;
+	margin: -98px 0 0 0;
+	width:100%;
+	text-align: center;
+}
+.m_map_center_bottom{
+	position: absolute;
+	z-index: 2;
+	margin: -51px 0 0 0;
+	width:100%;
+	text-align: center;
+}
+.m_card_masstransit{
+	display:inline-block;
+	position: relative;
+	margin-right: 2px;
+}
+.m_card_masstransit:after{
+	content: '';
+    position: absolute;
+    margin: 10px 0 0 -9px;
+    width: 18px;
+    height: 22px;
+    background: url("../i/masstransit.png") no-repeat 0px 0;
+}
+.st_checked.m_card_masstransit:after{
+	background-position: 0 -22px;
+}
+.m_card_auto{
+	display:inline-block;
+	position: relative;
+}
+.m_card_auto:after{
+	content: '';
+    position: absolute;
+    margin: 13px 0 0 -12px;
+    width: 24px;
+    height: 16px;
+    background: url("../i/masstransit.png") no-repeat -20px 0;
+}
+.st_checked.m_card_auto:after{
+	background-position: -20px -22px;
+}
+.m_card_navigator{
+	display:inline-block;
+	background-color: #6c9f00;	
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	box-shadow: 0px 1px 1px 0px rgba(51, 52, 52, 0.4);
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(51, 52, 52, 0.4);
+	width: 94%;
+	height: 41px;
+	line-height: 41px;
+	color: #FFF;
+}
+.m_card_reducemap{
+	position: absolute;
+    z-index: 3;
+	top: 8px;
+	right: 8px;
+    background: rgba(51, 52, 52, 0.4);
+    width: 33px;
+    height: 33px;
+    border-radius: 16px;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.m_card_reducemap:after{
+	content: '';
+    position: absolute;
+    margin: 9px 0 0 9px;
+    width: 15px;
+    height: 15px;
+    background: url("../i/cross.png") no-repeat 0;
+}
+.st_hidden{display:none};
 
 /*
 	Android optimization hacks

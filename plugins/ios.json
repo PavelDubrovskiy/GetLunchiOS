@@ -154,9 +154,28 @@
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "ru.one-touch.getlunch"
         },
-        "nl.x-services.plugins.socialsharing": {
+        "com.lampa.startapp": {
+            "PACKAGE_NAME": "ru.one-touch.getlunch"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "ru.one-touch.getlunch"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "ru.one-touch.getlunch"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "281560105368956",
+            "APP_NAME": "GetLunch",
+            "PACKAGE_NAME": "ru.one-touch.getlunch"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "XXXXXXX",
             "PACKAGE_NAME": "ru.one-touch.getlunch"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "ru.one-touch.getlunch"
+        }
+    }
 }

@@ -1,25 +1,23 @@
 <!---
- license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
-
-           http://www.apache.org/licenses/LICENSE-2.0
-
-         Unless required by applicable law or agreed to in writing,
-         software distributed under the License is distributed on an
-         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-         specific language governing permissions and limitations
-         under the License.
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
 -->
 
 # cordova-plugin-device-motion
-
-[![Build Status](https://travis-ci.org/apache/cordova-plugin-device-motion.svg)](https://travis-ci.org/apache/cordova-plugin-device-motion)
 
 This plugin provides access to the device's accelerometer. The accelerometer is
 a motion sensor that detects the change (_delta_) in movement relative to the
@@ -34,6 +32,8 @@ Although the object is attached to the global scoped `navigator`, it is not avai
     function onDeviceReady() {
         console.log(navigator.accelerometer);
     }
+
+:warning: Report issues on the [Apache Cordova issue tracker](https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Device%20Motion%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC)
 
 ## Installation
 
@@ -78,17 +78,22 @@ callback function.
               'Acceleration Y: ' + acceleration.y + '\n' +
               'Acceleration Z: ' + acceleration.z + '\n' +
               'Timestamp: '      + acceleration.timestamp + '\n');
-    };
+    }
 
     function onError() {
         alert('onError!');
-    };
+    }
 
     navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
 ### Browser Quirks
 
 Values for X, Y, Z motion are all randomly generated in order to simulate the accelerometer.
+
+### Android Quirks
+
+The accelerometer is called with the __SENSOR_DELAY_UI__ flag, which limits the maximum readout frequency to something between 20 and 60 Hz, depending on the device. Values for __period__ corresponding to higher frequencies will result in duplicate samples.
+
 
 ### iOS Quirks
 
@@ -123,11 +128,11 @@ accelerometer.
               'Acceleration Y: ' + acceleration.y + '\n' +
               'Acceleration Z: ' + acceleration.z + '\n' +
               'Timestamp: '      + acceleration.timestamp + '\n');
-    };
+    }
 
     function onError() {
         alert('onError!');
-    };
+    }
 
     var options = { frequency: 3000 };  // Update every 3 seconds
 
@@ -170,4 +175,3 @@ device lies flat and facing up, _x_, _y_, and _z_ values returned should be
 - __y__:  Amount of acceleration on the y-axis. (in m/s^2) _(Number)_
 - __z__:  Amount of acceleration on the z-axis. (in m/s^2) _(Number)_
 - __timestamp__: Creation timestamp in milliseconds. _(DOMTimeStamp)_
-
