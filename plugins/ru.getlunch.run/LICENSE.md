@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2015 https://github.com/lampaa/com.lampa.startapp
+Copyright (c) 2015 https://github.com/PavelDubrovskiy/ru.getlunch.run
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

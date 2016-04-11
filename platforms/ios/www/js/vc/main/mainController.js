@@ -222,7 +222,7 @@ define(["app", "js/vc/main/mainView", "js/utilities/forms", "js/utilities/map", 
 			getLunchBySquareCoords(222);
 		});
 		geolocation();
-		//setTimeout(getNearestLunches, 400);
+		setTimeout(geolocation, 2500);
 		//setTimeout(getLunchBySquareCoords, 400);
 		
 		//window.clearInterval(app.interval);

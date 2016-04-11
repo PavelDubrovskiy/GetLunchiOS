@@ -52,9 +52,6 @@
     <feature name="InAppBrowser">
         <param name="ios-package" value="CDVInAppBrowser" />
     </feature>
-    <feature name="startApp">
-        <param name="ios-package" value="startApp" />
-    </feature>
     <feature name="SocialSharing">
         <param name="ios-package" value="SocialSharing" />
         <param name="onload" value="true" />
@@ -75,6 +72,9 @@
     <access origin="https://*.akamaihd.net" />
     <feature name="PushNotification">
         <param name="ios-package" value="PushPlugin" />
+    </feature>
+    <feature name="getlunchRun">
+        <param name="ios-package" value="getlunchRun" />
     </feature>
     <name>GetLunch</name>
     <description>

@@ -152,12 +152,15 @@ define(["app", "js/vc/card/cardView", "js/utilities/forms", "js/utilities/map", 
 		});
 		$('.m_card_navigator').click(function(){
 			try{
-				navigator.startApp.start([["action", "ru.yandex.yandexnavi.action.BUILD_ROUTE_ON_MAP"],[{'lat_from':app.latitude},{'lon_from':app.longitude},{'lat_to':lunch.latitude},{'lon_to':lunch.longitude}]],
-					function(message) {}, 
-					function(error){console.log(error);}
-				);
+				if( device.platform == 'android' || device.platform == 'Android'){
+					getlunchRun.yandexnavi({'lat_from':app.latitude*1,'lon_from':app.longitude*1,'lat_to':lunch.latitude*1,'lon_to':lunch.longitude*1},
+							function(message) {console.log(message);}, 
+							function(error){console.log(error);}
+					);
+				}else{
+					getlunchRun.yandexnavi("yandexnavi://build_route_on_map?lat_from="+app.latitude*1+"&lon_from="+app.longitude*1+"&lat_to="+lunch.latitude*1+"&lon_to="+lunch.longitude*1+"");
+				}
 			}catch(e){console.log(e);}
-			
 		});
 		$('.m_card_reducemap').click(function(){
 			controlReduceMap();
@@ -185,7 +188,10 @@ define(["app", "js/vc/card/cardView", "js/utilities/forms", "js/utilities/map", 
 	}
 	function callSomeone(){
 		try{
-			navigator.startApp.start([["action", "CALL"], ["tel:"+lunch.phone]]);
+			getlunchRun.telcall(lunch.phone,
+				function(message){console.log(message);}, 
+				function(error){console.log(error);}
+			);
 		}catch(e){console.log(e);}
 	}
 	function findMe() {

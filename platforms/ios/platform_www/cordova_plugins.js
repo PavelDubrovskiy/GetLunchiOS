@@ -202,14 +202,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.lampa.startapp/www/startApp.js",
-        "id": "com.lampa.startapp.startapp",
-        "pluginId": "com.lampa.startapp",
-        "merges": [
-            "startApp"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
         "id": "cordova-plugin-x-socialsharing.SocialSharing",
         "pluginId": "cordova-plugin-x-socialsharing",
@@ -259,6 +251,14 @@ module.exports = [
         "clobbers": [
             "PushNotification"
         ]
+    },
+    {
+        "file": "plugins/ru.getlunch.run/www/getlunchRun.js",
+        "id": "ru.getlunch.run.getlunchRun",
+        "pluginId": "ru.getlunch.run",
+        "merges": [
+            "getlunchRun"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -272,12 +272,12 @@ module.exports.metadata =
     "cordova-plugin-device-orientation": "1.0.2",
     "cordova-plugin-geolocation": "2.1.0",
     "cordova-plugin-inappbrowser": "1.3.0",
-    "com.lampa.startapp": "0.1.4",
     "cordova-plugin-x-socialsharing": "5.0.11",
     "cordova-plugin-app-event": "1.2.0",
     "de.appplant.cordova.plugin.local-notification": "0.8.4",
     "cordova-plugin-facebook4": "1.7.0",
-    "phonegap-plugin-push": "1.6.1"
+    "phonegap-plugin-push": "1.6.1",
+    "ru.getlunch.run": "0.0.2"
 }
 // BOTTOM OF METADATA
 });
