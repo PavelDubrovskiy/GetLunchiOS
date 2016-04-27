@@ -154,13 +154,13 @@ define(["app", "js/vc/card/cardView", "js/utilities/forms", "js/utilities/map", 
 			try{
 				if( device.platform == 'android' || device.platform == 'Android'){
 					getlunchRun.yandexnavi({'lat_from':app.latitude*1,'lon_from':app.longitude*1,'lat_to':lunch.latitude*1,'lon_to':lunch.longitude*1},
-							function(message){console.log(message);}, 
-							function(error){console.log(error);}
+						function(message){console.log(message);}, 
+						function(error){console.log(error);}
 					);
 				}else{
-					getlunchRun.yandexnavi("yandexnavi://build_route_on_map?lat_from="+app.latitude*1+"&lon_from="+app.longitude*1+"&lat_to="+lunch.latitude*1+"&lon_to="+lunch.longitude*1+"",
-							function(message){console.log(message);}, 
-							function(error){console.log(error);}
+					getlunchRun.yandexnavi("lat_from="+app.latitude*1+"&lon_from="+app.longitude*1+"&lat_to="+lunch.latitude*1+"&lon_to="+lunch.longitude*1+"",
+						function(message){console.log(message);}, 
+						function(error){console.log(error);}
 					);
 				}
 			}catch(e){console.log(e);}
