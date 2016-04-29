@@ -123,6 +123,10 @@
                         {
                             "xml": "<array><string>fbapi</string><string>fb-messenger-api</string><string>fbauth2</string><string>fbshareextension</string></array>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<array><string>yandexnavi</string><string>tel</string></array>",
+                            "count": 1
                         }
                     ],
                     "UIBackgroundModes": [
@@ -471,6 +475,6 @@
         "de.appplant.cordova.plugin.local-notification": "0.8.4",
         "cordova-plugin-facebook4": "1.7.0",
         "phonegap-plugin-push": "1.6.1",
-        "ru.getlunch.run": "0.0.2"
+        "ru.getlunch.run": "0.0.6"
     }
 }

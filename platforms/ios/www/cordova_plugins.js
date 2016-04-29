@@ -277,7 +277,7 @@ module.exports.metadata =
     "de.appplant.cordova.plugin.local-notification": "0.8.4",
     "cordova-plugin-facebook4": "1.7.0",
     "phonegap-plugin-push": "1.6.1",
-    "ru.getlunch.run": "0.0.2"
+    "ru.getlunch.run": "0.0.6"
 }
 // BOTTOM OF METADATA
 });
